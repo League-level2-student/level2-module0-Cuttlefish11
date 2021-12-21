@@ -1,4 +1,4 @@
-package arrays;
+package arrays ;             
 
 import java.util.Random;
 
@@ -8,7 +8,7 @@ public class _01_RobotRace {
 	
 public static void main(String[] args) {
 	Robot[] droid = new Robot[5];
-	
+	 
 	for (int i = 0; i < droid.length; i++) {
 		droid[i] = new Robot();
 		droid[i].setX(42 + 150*i);
@@ -55,4 +55,10 @@ else if (droid[4].getY() < 0) {
 	//8. try different races with different amounts of robots.
 
 	//9. make the robots race around a circular track.
+//FOR CIRCLES AND THE CCIRCULAR TRACK
+//for (int i = 0; i < 400; i++) {
+	//one.turn(360/359);
+	//one.move(5);
+		
+//}
 }
