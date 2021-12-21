@@ -1,8 +1,44 @@
 package arrays;
 
-public class _01_RobotRace {
-	//1. make a main method
+import java.util.Random;
 
+import org.jointheleague.graphical.robot.Robot;
+
+public class _01_RobotRace {
+	
+public static void main(String[] args) {
+	Robot[] droid = new Robot[5];
+	
+	for (int i = 0; i < droid.length; i++) {
+		droid[i] = new Robot();
+		droid[i].setX(42 + 150*i);
+		droid[i].setY(535);	
+	}
+	
+	while (droid[0].getY() > 0 && droid[1].getY() > 0 && droid[2].getY() > 0 && droid[3].getY()> 0 && droid[4].getY() > 0) {
+	for (int i = 0; i < droid.length; i++) {
+		droid[i].setSpeed(500);
+		Random ran = new Random();
+		int distance = ran.nextInt(51);
+		droid[i].move(distance);
+	}
+	}
+if (droid[0].getY() < 0) {
+	System.out.println("The races winner is the first robot, the Amazing Blue Robot!");
+}
+else if (droid[1].getY() < 0) {
+	System.out.println("The races winner is the second robot, the Speed Bot!");
+}
+else if (droid[2].getY() < 0) {
+	System.out.println("The races winner is the third robot, the Wired Hero!");
+}
+else if (droid[3].getY() < 0) {
+	System.out.println("The races winner is the fourth robot, the Jumping Droid!");
+}
+else if (droid[4].getY() < 0) {
+	System.out.println("The races winner is the fifth robot, the Robotic Rhino!");
+}
+}
 	//2. create an array of 5 robots.
 
 	//3. use a for loop to initialize the robots.
